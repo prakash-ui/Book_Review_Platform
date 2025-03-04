@@ -13,7 +13,7 @@ A book review platform built with React for the frontend, Node.js/Express for th
 *The home page for an admin, showing featured books and the "Add a New Book" form.*
 
 ### Book Detail Page (Logged In as User)
-![Alt text](image_url)
+![Alt text](https://github.com/prakash-ui/Book_Review_Platform/blob/main/Book%20detail%20page.png?raw=true)
 *The book detail page for "The Great Gatsby," showing the "Write a Review" form for a logged-in user.*
 
 
