@@ -5,7 +5,7 @@ A book review platform built with React for the frontend, Node.js/Express for th
 ## Screenshots
 
 ### Login Page
-![Alt text](image_url)
+![Alt text](https://github.com/prakash-ui/Book_Review_Platform/blob/main/login%20page.png?raw=true)
 *The login page where users can sign in or sign up.*
 
 ### Admin Home Page (Logged In as Admin)
