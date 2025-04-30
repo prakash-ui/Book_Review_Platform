@@ -15,15 +15,18 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
   
-  // app.get('/books', (req, res) => {
-  //   res.redirect(301, '/api/books' + req.url.slice('/books'.length));
-  // });
+  app.get('/books', (req, res) => {
+    res.redirect(301, '/api/books' + req.url.slice('/books'.length));
+  });
+  app.get('/auth', (req, res) => {
+    res.redirect(301, '/api/auth' + req.url.slice('/auth'.length));
+  });
 
 // Routes
-app.use('/books', require('./routes/bookRoutes'));
-app.use('/reviews', require('./routes/reviewRoutes'));
-app.use('/users', require('./routes/userRoutes'));
-app.use('/auth', require('./routes/authRoutes'));
+app.use('/api/books', require('./routes/bookRoutes'));
+app.use('/api/reviews', require('./routes/reviewRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
 
 // Add this route to handle root URL requests
 app.get("/", (req, res) => {
