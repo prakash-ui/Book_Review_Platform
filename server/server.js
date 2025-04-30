@@ -7,7 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
+app.use(cors({
+  origin: [
+    'https://effulgent-blancmange-3b057c.netlify.app/', // Your Netlify frontend
+    'http://localhost:3000' // For local development
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB Connection
