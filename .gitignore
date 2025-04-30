@@ -1,0 +1,14 @@
+# Node.js and React dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Build folders
+client/build/
+server/build/
+
+# Logs and caches
+*.log
+.DS_Store
