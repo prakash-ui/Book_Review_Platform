@@ -14,6 +14,10 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
+  
+  app.get('/books', (req, res) => {
+    res.redirect(301, '/api/books' + req.url.slice('/books'.length));
+  });
 
 // Routes
 app.use('/api/books', require('./routes/bookRoutes'));
@@ -33,5 +37,7 @@ app.get("/", (req, res) => {
     ]
   });
 });
+// Add this before other routes
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
