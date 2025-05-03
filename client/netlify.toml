@@ -1,0 +1,11 @@
+[build]
+  base = "client"       # Tell Netlify your app is in the client folder
+  command = "npm run build"
+  publish = "build"     # Create React App outputs to client/build
+  functions = "functions"  # Only include if you're using Netlify Functions
+ ignore_submodules = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
