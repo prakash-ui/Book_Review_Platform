@@ -15,8 +15,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="bg-white shadow-md p-4 ">
+      <div className="container mx-auto flex items-center justify-between display-flex flex-wrap @media (max-width: 600px) { flex-direction: column; }">
         <Link to="/" className="text-2xl font-bold text-[#00635D]">
           BookReviews
         </Link>
